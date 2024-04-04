@@ -189,9 +189,10 @@
      * This is the function that is called when the web chat code has been loaded and it is ready to be rendered.
      */
     async function onLoad(instance) {
+      await instance.updateLocale('cs');
       // Save this instance so we can use it in our handlers.
       webChatInstance = instance;
-
+      
       // Listen for the customResponse event that will allow us to create content for the custom response when one is
       // received. See https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary for more
       // about our events.
@@ -256,8 +257,8 @@
      */
     async function onLoad(instance) {
       // Save this instance so we can use it in our handlers.
+      await instance.updateLocale('cs');
       webChatInstance = instance;
-      
       // Listen for the customResponse event that will allow us to create content for the custom response when one is
       // received. See https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary for more
       // about our events.
