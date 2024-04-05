@@ -190,6 +190,8 @@
      */
     async function onLoad(instance) {
       await instance.updateLocale('cs');
+      const customLanguagePack = {message_labelYou: 'Uživatel {timestamp}'};
+      instance.updateLanguagePack(customLanguagePack);
       // Save this instance so we can use it in our handlers.
       webChatInstance = instance;
       
@@ -258,6 +260,8 @@
     async function onLoad(instance) {
       // Save this instance so we can use it in our handlers.
       await instance.updateLocale('cs');
+      const customLanguagePack = {message_labelYou: 'Uživatel {timestamp}'};
+      instance.updateLanguagePack(customLanguagePack);
       webChatInstance = instance;
       // Listen for the customResponse event that will allow us to create content for the custom response when one is
       // received. See https://web-chat.global.assistant.watson.cloud.ibm.com/docs.html?to=api-events#summary for more
