@@ -17,9 +17,9 @@
     }
 
     .WebChatContainer {
-      position: absolute;
+      position: absolute; 
       width: 500px;
-      right: 0;
+      right: 0; /*0*/
       top: 16px;
       bottom: 16px;
     }
@@ -188,7 +188,7 @@
     /**
      * This is the function that is called when the web chat code has been loaded and it is ready to be rendered.
      */
-    async function onLoad(instance) {
+   /* async function onLoad(instance) {
       await instance.updateLocale('cs');
       const customLanguagePack = {message_labelYou: 'Uživatel {timestamp}'};
       instance.updateLanguagePack(customLanguagePack);
@@ -208,7 +208,7 @@
       instance.on({ type: 'pre:send', handler: preSendHandler });
 
       await instance.render();
-    }
+    }*/
     
     /**
      * This function is called after a view change has occurred. It will trigger the animation for the main window and
@@ -260,7 +260,8 @@
     async function onLoad(instance) {
       // Save this instance so we can use it in our handlers.
       await instance.updateLocale('cs');
-      const customLanguagePack = {message_labelYou: 'Uživatel {timestamp}'};
+      const customLanguagePack = {message_labelYou: 'Uživatel {timestamp}',
+      input_placeholder: 'Zadejte otázku...'};
       instance.updateLanguagePack(customLanguagePack);
       webChatInstance = instance;
       // Listen for the customResponse event that will allow us to create content for the custom response when one is
